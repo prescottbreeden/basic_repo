@@ -1,0 +1,143 @@
+Prescotts-iMac:git prescottbreeden$ mkdir basic_repo
+Prescotts-iMac:git prescottbreeden$ cd basic_repo/
+Prescotts-iMac:basic_repo prescottbreeden$ ls
+Prescotts-iMac:basic_repo prescottbreeden$ git init
+Initialized empty Git repository in /Users/prescottbreeden/Dropbox/Code/codingDojo/dojoAssignments/webFundamentals/git/basic_repo/.git/
+Prescotts-iMac:basic_repo prescottbreeden$ ls
+Prescotts-iMac:basic_repo prescottbreeden$ ls -a
+.	..	.git
+Prescotts-iMac:basic_repo prescottbreeden$ touch readme.txt
+Prescotts-iMac:basic_repo prescottbreeden$ ls
+readme.txt
+Prescotts-iMac:basic_repo prescottbreeden$ touch index.html
+Prescotts-iMac:basic_repo prescottbreeden$ touch style.css
+Prescotts-iMac:basic_repo prescottbreeden$ touch js.js
+Prescotts-iMac:basic_repo prescottbreeden$ ls
+index.html	js.js		readme.txt	style.css
+Prescotts-iMac:basic_repo prescottbreeden$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	index.html
+	js.js
+	readme.txt
+	style.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+Prescotts-iMac:basic_repo prescottbreeden$ git add .
+Prescotts-iMac:basic_repo prescottbreeden$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   index.html
+	new file:   js.js
+	new file:   readme.txt
+	new file:   style.css
+
+Prescotts-iMac:basic_repo prescottbreeden$ git remote add origin https://github.com/prescottbreeden/basic_repo.git
+Prescotts-iMac:basic_repo prescottbreeden$ git push -u origin master
+error: src refspec master does not match any.
+error: failed to push some refs to 'https://github.com/prescottbreeden/basic_repo.git'
+Prescotts-iMac:basic_repo prescottbreeden$ git status --staged
+error: unknown option `staged'
+usage: git status [<options>] [--] <pathspec>...
+
+    -v, --verbose         be verbose
+    -s, --short           show status concisely
+    -b, --branch          show branch information
+    --show-stash          show stash information
+    --porcelain[=<version>]
+                          machine-readable output
+    --long                show status in long format (default)
+    -z, --null            terminate entries with NUL
+    -u, --untracked-files[=<mode>]
+                          show untracked files, optional modes: all, normal, no. (Default: all)
+    --ignored             show ignored files
+    --ignore-submodules[=<when>]
+                          ignore changes to submodules, optional when: all, dirty, untracked. (Default: all)
+    --column[=<style>]    list untracked files in columns
+
+Prescotts-iMac:basic_repo prescottbreeden$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   index.html
+	new file:   js.js
+	new file:   readme.txt
+	new file:   style.css
+
+Prescotts-iMac:basic_repo prescottbreeden$ git commit -a -m "created and uploaded project files"
+[master (root-commit) f38d79b] created and uploaded project files
+ 4 files changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 index.html
+ create mode 100644 js.js
+ create mode 100644 readme.txt
+ create mode 100644 style.css
+Prescotts-iMac:basic_repo prescottbreeden$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 266 bytes | 266.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+git statuTo https://github.com/prescottbreeden/basic_repo.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+Prescotts-iMac:basic_repo prescottbreeden$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working tree clean
+Prescotts-iMac:basic_repo prescottbreeden$ open readme.txt 
+Prescotts-iMac:basic_repo prescottbreeden$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   readme.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Prescotts-iMac:basic_repo prescottbreeden$ git add -A
+Prescotts-iMac:basic_repo prescottbreeden$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   readme.txt
+
+Prescotts-iMac:basic_repo prescottbreeden$ git commit -a -m "added coconuts to readme"
+[master 54cf9ed] added coconuts to readme
+ 1 file changed, 1 insertion(+)
+Prescotts-iMac:basic_repo prescottbreeden$ git push -u origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 310 bytes | 310.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+git status
+To https://github.com/prescottbreeden/basic_repo.git
+   f38d79b..54cf9ed  master -> master
+Branch master set up to track remote branch master from origin.
+Prescotts-iMac:basic_repo prescottbreeden$ git status
+On branch master
+Your branch is up-to-date with 'origin/master'.
+
+nothing to commit, working tree clean
+Prescotts-iMac:basic_repo prescottbreeden$ 
